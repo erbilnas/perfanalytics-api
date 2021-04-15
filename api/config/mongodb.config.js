@@ -1,3 +1,3 @@
 module.exports = {
-    url: 'mongodb://localhost:27017/perfanalytics-api'
+    url: 'mongodb://localhost:27017/perfanalytics-db'
 }

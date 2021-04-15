@@ -17,11 +17,12 @@ mongoose.connect(dbConfig.url, {
 })
 
 app.use(cors())
+
 // Parse JSON bodies (as sent by API clients)
 app.use(express.json());
 
-require('./api/routes/metrics.route')(app);
-// listen for requests
+require('./api/routes/perfanalytics.route')(app);
+
 app.listen(8000, () => {
     console.log("Server is listening on port 8000");
-}); 5
+})

@@ -1,4 +1,5 @@
 const PerfanalyticsModel = require('../models/perfanalytics.model')
+const moment = require('moment')
 
 exports.getMetricsFromLib = (req, res) => {
     let data = req.body
@@ -27,4 +28,42 @@ exports.getMetricsFromLib = (req, res) => {
                 message: error.message || "Some error occurred while saving data."
             })
         })
+}
+
+exports.sendMeasures = (req, res) => {
+    let startDate = req.query.startDate
+    let endDate = req.query.endDate
+
+    const findMetricsWithDates = async () => {
+        return await PerfanalyticsModel.find({
+            "date": {
+                '$gte': startDate,
+                '$lt': endDate,
+            }
+        }).exec().then((query) => {
+            console.log("q",query)
+            return query
+        })
+    }
+
+    findMetricsWithDates().then((measure) => {
+        let measures = []
+
+        measure.forEach((measure) => {
+            console.log("me",measure)
+            measures.push({
+                _id: measure._id,
+                url: measure.url,
+                date: moment(measure.date).format('lll'),
+                ttfb: measure.ttfb,
+                fcp: measure.fcp,
+                domLoad: measure.domLoad,
+                windowLoad: measure.windowLoad,
+            })
+        })
+        console.log("m",measures)
+        res.status(200).send({
+            measures
+        })
+    })
 }

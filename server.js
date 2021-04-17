@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const dbConfig = require('./api/config/mongodb.config')
+const corsConfig = require('./api/config/cors.config')
 const mongoose = require('mongoose')
 const cors = require('cors')
 
@@ -16,7 +17,7 @@ mongoose.connect(dbConfig.url, {
     process.exit()
 })
 
-app.use(cors())
+app.use(cors(corsConfig));
 
 // Parse JSON bodies (as sent by API clients)
 app.use(express.json());

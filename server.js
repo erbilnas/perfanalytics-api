@@ -18,8 +18,6 @@ mongoose.connect(dbConfig.url, {
 })
 
 app.use(cors(corsConfig));
-
-// Parse JSON bodies (as sent by API clients)
 app.use(express.json());
 
 require('./api/routes/perfanalytics.route')(app);

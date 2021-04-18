@@ -41,7 +41,6 @@ exports.sendMeasures = (req, res) => {
                 '$lt': endDate,
             }
         }).exec().then((query) => {
-            console.log("q",query)
             return query
         })
     }
@@ -50,7 +49,6 @@ exports.sendMeasures = (req, res) => {
         let measures = []
 
         measure.forEach((measure) => {
-            console.log("me",measure)
             measures.push({
                 _id: measure._id,
                 url: measure.url,
@@ -61,7 +59,7 @@ exports.sendMeasures = (req, res) => {
                 windowLoad: measure.windowLoad,
             })
         })
-        console.log("m",measures)
+
         res.status(200).send({
             measures
         })

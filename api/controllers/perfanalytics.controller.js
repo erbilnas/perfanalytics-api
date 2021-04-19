@@ -21,7 +21,9 @@ exports.getMetricsFromLib = (req, res) => {
 
     metric.save()
         .then((success) => {
-            res.send(success)
+            res.status(200).send({
+                message: "Success",
+            })
         })
         .catch((error) => {
             res.status(500).send({

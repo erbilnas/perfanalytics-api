@@ -26,7 +26,7 @@ $ pm2 start server.js -i 0
 
 ![Screen Shot 2021-04-21 at 16 06 22](https://user-images.githubusercontent.com/15656271/115558855-d3260380-a2bb-11eb-8e11-450648d4dfd3.png)
 
-
+TL;DR As result, POST /metrics took 1.56 seconds to handle with 200 requests, while GET /measures handle the same number of requests in 1.64 seconds.
 
 #### Test Enviroment
 

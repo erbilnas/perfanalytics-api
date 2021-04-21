@@ -4,8 +4,8 @@
 - [API Load Test Results](#api-load-test-results)
   - [Description](#description)
   - [Test Enviroment](#test-enviroment)
-  - [GET /measures](#get-/measures)
-  - [POST /metrics](#post-/metrics)
+  - [GET /measures](#get-measures)
+  - [POST /metrics](#post-metrics)
 
 ## Overview
 

@@ -14,6 +14,8 @@ A simple RESTful API which saves data that coming from PerfanalyticsJS library a
 
 ## CI/CD Integration
 
+For automated deployment, Heroku used as cloud platform to run container and GitHub Actions used as pipelines to do continuous integration and delivery. Whenever a new feature branch merged with "master", this event triggers GitHub Actions' related workflow to build and deploy Docker container to Heroku. You can see the details in "heroku.yml" inside this repo.
+
 ## API Load Test Results
 
 #### Description

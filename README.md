@@ -15,10 +15,18 @@ A simple RESTful API, which saves data that from perfanalytics-js and returns ti
 
 #### Description
 
-This API has been tested with Postman's new feature, [The Collection Runner](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/), 
-using the most popular JavaScript cluster manager runtime, PM2.
+This API has been tested using Postman's new feature, [The Collection Runner](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/), 
+with the help of the most popular JavaScript cluster manager runtime, PM2. 
+
+You can test it on your machine using this command.
+
+```shell
+$ pm2 start server.js -i 0
+```
 
 ![Screen Shot 2021-04-21 at 16 06 22](https://user-images.githubusercontent.com/15656271/115558855-d3260380-a2bb-11eb-8e11-450648d4dfd3.png)
+
+
 
 #### Test Enviroment
 

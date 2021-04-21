@@ -1,6 +1,7 @@
 ## Contents
 
 - [Overview](#overview)
+- [CI/CD Integration](#cicd-integration)
 - [API Load Test Results](#api-load-test-results)
   - [Description](#description)
   - [Test Enviroment](#test-enviroment)
@@ -9,7 +10,9 @@
 
 ## Overview
 
-A simple RESTful API, which saves data that from perfanalytics-js and returns time specific, filtered data.
+A simple RESTful API which saves data that coming from PerfanalyticsJS library and returns time specific filtered data. Developed by using NodeJS (Express), MongoDB and dockerized by using Docker.
+
+## CI/CD Integration
 
 ## API Load Test Results
 
